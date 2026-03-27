@@ -883,7 +883,7 @@ section {
 }
 .chat-messages::-webkit-scrollbar { display: none; }
 
-.bubble-row { display: flex; flex-direction: column; }
+.bubble-row { display: flex; flex-direction: column; text-align: left; }
 .bubble-row.right { align-items: flex-end; }
 .bubble-row.left  { align-items: flex-start; }
 
