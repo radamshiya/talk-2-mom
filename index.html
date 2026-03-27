@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiya Talk-2-Mom</title>
+  <meta name="description" content="An AI deepfake of your voice that handles mom calls while you're busy. Free forever. Moms can't tell the difference.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800;900&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================================
+       NAV
+       ================================ -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <!-- Talk-2-Mom wordmark SVG — Hiya-inspired style -->
+      <svg viewBox="0 0 230 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Hiya Talk-2-Mom">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#7c3aed"/>
+            <stop offset="100%" stop-color="#ec4899"/>
+          </linearGradient>
+        </defs>
+        <!-- Phone icon circle -->
+        <circle cx="18" cy="18" r="16" fill="url(#logoGrad)"/>
+        <text x="11" y="24" font-size="16" fill="white">📞</text>
+        <!-- Wordmark -->
+        <text x="42" y="25" font-family="Catamaran, sans-serif" font-weight="800" font-size="18" letter-spacing="-0.5" fill="#111111">Hiya Talk-2-Mom</text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#pain">Why Talk-2-Mom</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#coming-soon">Coming Soon</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="nav-login" target="_blank">Log in</a>
+      <a href="#get-started" class="nav-cta">Get started →</a>
+    </div>
+  </nav>
+
+  <!-- ================================
+       HERO
+       ================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-layout">
+      <!-- Left: content -->
+      <div class="hero-content fade-in">
+<h1 class="text-hero">
+          Your mom is calling. We'll handle it.
+        </h1>
+        <p class="hero-subhead">
+          We all love our moms, but our modern busy schedules makes it hard to stay on the line with her while she tells you how great your cousin or sister is.<br><br><strong>With Hiya Talk-2-Mom, we keep mom busy while you're busy.</strong>
+        </p>
+        <div class="hero-cta-row">
+          <a href="#get-started" class="btn-primary">Sign up for free →</a>
+        </div>
+        <p class="hero-proof">Trusted by <strong>847,293 busy adults</strong> who love their moms but also love themselves</p>
+      </div>
+
+      <!-- Right: phone preview -->
+      <div class="hero-visual fade-in" style="transition-delay: 0.15s;">
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-status-bar">
+              <span class="phone-time">9:41</span>
+              <span class="phone-signal">●●●● 5G 🔋</span>
+            </div>
+            <div class="chat-header">
+              <div class="chat-contact">Mom 💕</div>
+              <div class="chat-status-row">
+                <div class="chat-status-dot"></div>
+                <span class="chat-status-label">Hiya Talk-2-Mom Active</span>
+              </div>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       PAIN POINTS
+       ================================ -->
+  <section class="pain-section" id="pain">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-eyebrow">The Problem</div>
+        <h2 class="text-display">Does Your Mom...</h2>
+      </div>
+      <div class="pain-grid fade-in">
+        <div class="pain-card">
+          <span class="pain-emoji">📞</span>
+          <p>Call you daily to explain — in detail — what she saw out the window?</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">🏆</span>
+          <p>Need to update you on your cousin's latest achievement that you absolutely did not ask about?</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">⏰</span>
+          <p>Call at exactly the wrong time, every single time? Meeting? Dinner? Doesn't matter.</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">😤</span>
+          <p>Remind you that your sister called her back within two rings — and she's <em>very</em> busy too?</p>
+        </div>
+        <div class="pain-card">
+          <span class="pain-emoji">💬</span>
+          <p>Turn a "quick question" into a 45-minute recap of what's happening in the neighborhood?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       HOW IT WORKS
+       ================================ -->
+  <section class="how-section" id="how-it-works">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-eyebrow">The Solution</div>
+        <h2 class="text-display">How <span class="gradient-text">Talk-2-Mom</span> Works</h2>
+        <p>Four simple steps to total freedom. Or at least freedom from a 40-minute story about the neighbor's new fence.</p>
+      </div>
+      <div class="steps-wrapper fade-in">
+        <div class="steps-connector" aria-hidden="true"></div>
+        <div class="steps-row">
+          <div class="step">
+            <div class="step-number">1</div>
+            <span class="step-emoji">📱</span>
+            <h3>Your mom calls</h3>
+            <p>Right in the middle of everything, as always.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <span class="step-emoji">📖</span>
+            <h3>She starts a story</h3>
+            <p>Could be 5 minutes. Could be an hour. Nobody knows.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <span class="step-emoji">🚀</span>
+            <h3>Activate Talk-2-Mom</h3>
+            <p>One tap. You're free. Go live your life.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <span class="step-emoji">🤖</span>
+            <h3>Your AI clone handles it</h3>
+            <p>Trained on your verbal filler words. Mom won't suspect a thing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       FEATURE HIGHLIGHT
+       ================================ -->
+  <section class="feature-section">
+    <div class="section-inner">
+      <div class="feature-layout fade-in">
+        <div class="feature-content">
+          <div class="section-eyebrow">AI Voice Cloning</div>
+          <h2 class="text-display">Sounds exactly <span class="gradient-text">like you.</span><br>Only more patient.</h2>
+          <p>Talk-2-Mom's proprietary VoiceClone™ technology analyzes your speech patterns, your verbal tics, and your complete inability to end a sentence with your mom. The result: an AI so convincing, she'll think you actually care.</p>
+          <ul class="feature-list">
+            <li>Trained on your "uh-huhs" and "oh wows"</li>
+            <li>Never gets distracted. Never sighs audibly.</li>
+            <li>Asks "how are you feeling about that?" at the right moments</li>
+            <li>Genuinely interested in the bird update</li>
+          </ul>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="btn-primary" target="_blank">See how it works →</a>
+        </div>
+        <div class="feature-visual">
+          🤖
+          <p style="font-size:0.875rem; color:var(--color-text-muted); margin-top:1rem; font-family:'Nunito Sans',sans-serif;">VoiceClone™ Active<br><strong style="color:var(--color-black);">Mom has been talking for 38 minutes.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================
+       SUMMARIZE WHAT MATTERS
+       ================================ -->
+  <section class="feature-section feature-section--alt">
+    <div class="section-inner">
+      <div class="feature-layout feature-layout--reverse fade-in">
+        <div class="feature-visual summary-visual">
+          <div class="phone-mockup">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-status-bar">
+                <span class="phone-time">9:41</span>
+                <span class="phone-signal">●●●● 5G 🔋</span>
+              </div>
+              <div class="chat-header">
+                <div class="chat-contact">Mom 💕</div>
+                <div class="chat-status-row">
+                  <div class="summary-ended-dot"></div>
+                  <span class="summary-ended-label">Call Ended · 47 min</span>
+                </div>
+              </div>
+              <div class="summary-phone-scroll" id="summary-phone-content"></div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-content">
+          <div class="section-eyebrow">Post-Call Intelligence</div>
+          <h2 class="text-display">Summarize what matters so it <span class="gradient-text">seems like you listened.</span></h2>
+          <p>After every call, Talk-2-Mom delivers a clean summary of what Mom actually said, flagged in order of how likely she is to quiz you on it later.</p>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="btn-primary" target="_blank">Try it free →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       COMING SOON — RACIST UNCLE MODE
+       ================================ -->
+  <section class="coming-soon-section" id="coming-soon">
+    <div class="section-inner">
+      <div class="section-header fade-in">
+        <div class="section-eyebrow">What's Next</div>
+        <h2 class="text-display">We're Just <span class="gradient-text">Getting Started</span></h2>
+        <p>Big things are coming. Very big. Uncomfortably big.</p>
+      </div>
+      <div class="uncle-layout fade-in">
+
+        <!-- Card -->
+        <div class="coming-soon-card" aria-label="Coming soon: Uncomfortable Uncle Mode">
+          <div class="coming-soon-badge">Coming Soon</div>
+          <h3>Uncomfortable Uncle Mode 🚧</h3>
+          <p>Trained on deflection, subject pivots, and the art of saying "well, that's just my opinion" after saying something completely unhinged.</p>
+          <p class="occasions">Handles calls about: politics, your life choices, gas prices, "what's really going on" with the economy, and why he doesn't trust the Wi-Fi.</p>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="btn-primary" target="_blank">Join Waitlist →</a>
+        </div>
+
+        <!-- Uncle phone mockup -->
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-status-bar">
+              <span class="phone-time">9:41</span>
+              <span class="phone-signal">●●●● 5G 🔋</span>
+            </div>
+            <div class="chat-header">
+              <div class="chat-contact">Uncle Gary 📞</div>
+              <div class="chat-status-row">
+                <div class="chat-status-dot"></div>
+                <span class="chat-status-label">Hiya Talk-2-Mom Active</span>
+              </div>
+            </div>
+            <div class="chat-messages" id="uncle-chat-messages"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       FINAL CTA
+       ================================ -->
+  <section class="final-cta" id="get-started">
+    <div class="final-cta-inner fade-in">
+      <span class="cta-emoji">🎉</span>
+      <h2>Ready to reclaim your time?</h2>
+      <p>Give your mom the gift of an attentive listener.<br>Give yourself the gift of silence.</p>
+      <div class="final-cta-btns">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="btn-white" target="_blank">See pricing &amp; sign up →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       FOOTER — Hiya multi-column style
+       ================================ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-mark">
+            <span style="font-size:1.5rem;">📞</span>
+            <span class="logo-text">Talk-2-Mom</span>
+          </div>
+        </div>
+        <p>"Keeping families connected. Sort of."</p>
+        <div class="footer-badges">
+          <div class="footer-badge">ISO Fake</div>
+          <div class="footer-badge">Mom Approved*</div>
+          <div class="footer-badge">G2 Joke of the Year</div>
+        </div>
+      </div>
+
+      <!-- Products column -->
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Talk-2-Mom Core</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">VoiceClone™</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Rant Detector</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Cousin Tracker</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Uncle Mode 🔒</a></li>
+        </ul>
+      </div>
+
+      <!-- Solutions column -->
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">For Workaholics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">For Gym Bros</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">For Brunchers</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">For the Napping</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Enterprise</a></li>
+        </ul>
+      </div>
+
+      <!-- Company column -->
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">About Us</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Newsroom</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Careers</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Privacy Policy</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p>© 2026 Talk-2-Mom, Inc. · A Totally Real Company · Not responsible for any family drama, hurt feelings, missed milestones, or mom finding out.<br>
+        <strong>AI responses may include excessive affirmations and suspiciously enthusiastic "Mmhmms." Results may vary. *Mom approval not actually confirmed.</strong></p>
+      </div>
+      <div class="footer-badges">
+        <div class="footer-badge">ANAB Fake</div>
+        <div class="footer-badge">AICPA Joke</div>
+        <div class="footer-badge">IAF Certified™</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================
+       JAVASCRIPT
+       ================================ -->
+  <script>
+    // Smooth scroll for internal anchors
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Scroll-triggered fade-in
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // Rotating hero words
+    var words = document.querySelectorAll('#rotating-hero .rotating-word');
+    var currentIndex = 0;
+
+    function rotateWord() {
+      words[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % words.length;
+      words[currentIndex].classList.add('active');
+    }
+
+    if (words.length > 1) {
+      setInterval(rotateWord, 2400);
+    }
+
+    // ── Typewriter conversation ──────────────────────────────
+    var conversation = [
+      { side: 'mom',  text: "You won't believe what happened at book club. So Linda — you know Linda, from the Tuesday group, not the Wednesday Linda — she brings a Jell-O mold and..." },
+      { side: 'ai',   text: "Wow, really?" },
+      { side: 'mom',  text: "Yes! And then she had the NERVE to say it was homemade. Anyway, your cousin Brittany just got promoted AGAIN and I wanted to tell you—" },
+      { side: 'ai',   text: "That's amazing!" },
+      { side: 'mom',  text: "She works so hard. You should really call her. When's the last time you called Brittany?" },
+      { side: 'ai',   text: "Mmhmm, tell me more!" },
+      { side: 'mom',  text: "Well I just think family is important. Oh! Did I tell you about the bird I saw yesterday morning?" },
+      { side: 'ai',   text: "No way! Keep going." },
+      { side: 'mom',  text: "It was a blue jay. Or maybe a cardinal. It was red. Or blue. Either way it sat on the fence for a very long time and I thought about you." },
+      { side: 'ai',   text: "That means so much." },
+      { side: 'mom',  text: "Are you eating? You sound thin." },
+      { side: 'ai',   text: "I've been eating really well actually!" },
+      { side: 'mom',  text: "I made a casserole. I can freeze it. I'll ship it. Do you want me to ship it? I'm going to ship it." },
+      { side: 'ai',   text: "You really don't have to do that." },
+      { side: 'mom',  text: "I already put it in a box. Anyway, did I tell you your cousin Derek just bought a boat?" },
+      { side: 'ai',   text: "Wow, a boat!" },
+      { side: 'mom',  text: "A boat. At his age. Your uncle Larry says it's irresponsible but I think it's wonderful. You should get a boat." },
+      { side: 'ai',   text: "I'll look into it." },
+      { side: 'mom',  text: "You'd look great on a boat. Brittany has a boat. Did I mention Brittany got promoted?" },
+      { side: 'ai',   text: "You might have mentioned that, yeah." },
+      { side: 'mom',  text: "She works so hard. Anyway the neighbors — the Hendersons, not the nice Hendersons, the other ones — they put up a fence." },
+      { side: 'ai',   text: "Oh no. What kind of fence?" },
+      { side: 'mom',  text: "Vinyl. WHITE vinyl. In this neighborhood. Your father is furious. He's been staring at it for three days." },
+      { side: 'ai',   text: "That's outrageous." },
+      { side: 'mom',  text: "I posted about it in the neighborhood Facebook group and got forty-seven comments. Forty-seven. Marcy said it looks cheap, which it does." },
+      { side: 'ai',   text: "Marcy's not wrong." },
+      { side: 'mom',  text: "She's not. Oh, I saw a recipe on Facebook. A chicken thing. Do you want me to send it? I'm going to send it." },
+      { side: 'ai',   text: "Sure, send it over!" },
+      { side: 'mom',  text: "Done. I sent it to your email. And your old email. And I printed it and I'm putting it in with the casserole." },
+      { side: 'ai',   text: "Perfect, thank you." },
+      { side: 'mom',  text: "Have you called your grandmother? She's been asking about you. She said — and I'm quoting — 'Does that child know I'm not going to be around forever?'" },
+      { side: 'ai',   text: "I'll call her this week, I promise." },
+      { side: 'mom',  text: "That's what you said last week. She waited by the phone, by the way. She told me. She just sat there." },
+      { side: 'ai',   text: "Okay I feel terrible." },
+      { side: 'mom',  text: "Good. Call her. Anyway, your father had his appointment. The doctor says everything is fine but I looked it up and I'm not sure I agree." },
+      { side: 'ai',   text: "What did you look up?" },
+      { side: 'mom',  text: "WebMD. And a Facebook group for people who don't trust doctors. Very informative group. Very active." },
+      { side: 'ai',   text: "I'm sure he'll be fine." },
+      { side: 'mom',  text: "He's fine. He's watching golf. He's always watching golf. How is that relaxing? It's just people walking." },
+      { side: 'ai',   text: "I've always wondered that myself." },
+      { side: 'mom',  text: "Oh! Kohl's is having a sale. I bought you some things. Nothing big. Just some shirts. And pants. And a jacket. And a duvet." },
+      { side: 'ai',   text: "A duvet?" },
+      { side: 'mom',  text: "It was thirty percent off. You can't say no to thirty percent off. That's just financial responsibility. Brittany clips coupons, you know." },
+      { side: 'ai',   text: "Of course she does." },
+      { side: 'mom',  text: "So when are you coming to visit? I'm not pressuring you. I'm just asking. For the calendar. I already told the neighbors you might come." },
+      { side: 'ai',   text: "Soon! Let me check my schedule." },
+      { side: 'mom',  text: "I'll make the casserole. A different casserole. I'll make two. Don't worry about sleeping arrangements I already washed your childhood sheets." },
+      { side: 'ai',   text: "You're the best." },
+      { side: 'mom',  text: "I know. Oh, one more thing — are you seeing anyone? You don't have to tell me. I just want to know everything." },
+      { side: 'ai',   text: "Ha! That's a great question." },
+      { side: 'mom',  text: "Brittany is seeing someone. A doctor. Well, a chiropractor. But still." },
+      { side: 'ai',   text: "Good for Brittany." },
+      { side: 'mom',  text: "It really is. Okay I should let you go. I know you're busy. I just wanted to call real quick and check in." },
+      { side: 'ai',   text: "So glad you did. Love you!" },
+      { side: 'mom',  text: "Love you too. Oh wait, one more thing—" },
+      { side: 'ai',   text: "Of course, what is it?" }
+    ];
+
+    var chatEl = document.getElementById('chat-messages');
+    var MAX_BUBBLES = 6; // max rows visible before old ones fade out
+
+    function makeTypingIndicator() {
+      var row = document.createElement('div');
+      row.className = 'bubble-row left typing-row';
+      row.innerHTML = '<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+      return row;
+    }
+
+    function trimOldBubbles() {
+      var rows = chatEl.querySelectorAll('.bubble-row:not(.typing-row)');
+      if (rows.length > MAX_BUBBLES) {
+        var toRemove = rows.length - MAX_BUBBLES;
+        for (var i = 0; i < toRemove; i++) {
+          rows[i].style.transition = 'opacity 0.4s ease';
+          rows[i].style.opacity = '0';
+          (function(el) { setTimeout(function() { el.remove(); }, 400); })(rows[i]);
+        }
+      }
+    }
+
+    function scrollChat() {
+      chatEl.scrollTop = chatEl.scrollHeight;
+    }
+
+    function typeBubble(side, text, done) {
+      var row = document.createElement('div');
+      row.className = 'bubble-row ' + (side === 'mom' ? 'left' : 'right');
+      row.style.opacity = '0';
+      row.style.transition = 'opacity 0.25s ease';
+
+      if (side === 'mom') {
+        row.innerHTML = '<div class="bubble-label">Mom</div><div class="bubble-mom"></div>';
+      } else {
+        row.innerHTML = '<div class="bubble-label">AI You ✨</div><div class="bubble-you"></div>';
+      }
+
+      chatEl.appendChild(row);
+      trimOldBubbles();
+
+      // Fade row in
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          row.style.opacity = '1';
+        });
+      });
+
+      var bubble = row.querySelector('.bubble-mom, .bubble-you');
+      var i = 0;
+      // Mom types slower (longer messages), AI snaps in faster
+      var speed = side === 'mom' ? 14 : 23;
+
+      function typeNext() {
+        if (i < text.length) {
+          bubble.textContent += text[i];
+          i++;
+          scrollChat();
+          setTimeout(typeNext, speed);
+        } else {
+          if (done) setTimeout(done, side === 'mom' ? 600 : 400);
+        }
+      }
+
+      typeNext();
+    }
+
+    function runConversation(startIndex) {
+      startIndex = startIndex || 0;
+
+      function step(index) {
+        if (index >= conversation.length) {
+          // Pause then restart
+          setTimeout(function() {
+            // Clear chat and restart
+            chatEl.innerHTML = '';
+            step(0);
+          }, 3000);
+          return;
+        }
+
+        var msg = conversation[index];
+
+        if (msg.side === 'mom') {
+          // Show typing indicator first
+          var typingRow = makeTypingIndicator();
+          chatEl.appendChild(typingRow);
+          scrollChat();
+
+          var typingDelay = Math.min(600 + msg.text.length * 4, 1800);
+          setTimeout(function() {
+            typingRow.remove();
+            typeBubble('mom', msg.text, function() {
+              step(index + 1);
+            });
+          }, typingDelay);
+        } else {
+          // AI responds after a short pause
+          setTimeout(function() {
+            typeBubble('ai', msg.text, function() {
+              step(index + 1);
+            });
+          }, 300);
+        }
+      }
+
+      step(startIndex);
+    }
+
+    // Phone is in the hero — start immediately
+    runConversation(0);
+
+    // ── Uncle conversation ───────────────────────────────────
+    var uncleConversation = [
+      { side: 'uncle', text: "Hey, you got a minute? I'm calling from the car. Well, I pulled over. They want you to use hands-free but I don't trust those Bluetooth things. They fry your brain." },
+      { side: 'ai',    text: "Good thinking. Safety first." },
+      { side: 'uncle', text: "Exactly. Listen, I saw something on the news. Did you see what's happening with gas prices? It's unbelievable. It's all connected." },
+      { side: 'ai',    text: "Connected to what?" },
+      { side: 'uncle', text: "Everything. I can't get into it right now, I'm on the side of the road. But I'll send you a link. Actually a few links. Don't read them on your phone, read them on a computer." },
+      { side: 'ai',    text: "I'll keep an eye out for those." },
+      { side: 'uncle', text: "Your cousin Derek bought a boat by the way. A boat. I told him, I said, Derek, that's a mistake. He didn't listen. He never listens." },
+      { side: 'ai',    text: "Hopefully it works out for him." },
+      { side: 'uncle', text: "It won't. I know boats. I had a boat in 1987. Disaster. Anyway what are you doing for work these days? You still doing that computer stuff?" },
+      { side: 'ai',    text: "Yeah, still doing the computer stuff." },
+      { side: 'uncle', text: "See I don't trust computers. I mean I use them, but I don't trust them. You know they're listening, right? All the time. Through the camera too." },
+      { side: 'ai',    text: "That's a wild thought." },
+      { side: 'uncle', text: "It's not a thought, it's a fact. I put tape over my camera. Both cameras. My wife thinks I'm crazy but who's laughing now, I ask you." },
+      { side: 'ai',    text: "You might be onto something." },
+      { side: 'uncle', text: "I'm onto a lot of things. Have you looked into what they put in the water? Not saying anything, just asking questions." },
+      { side: 'ai',    text: "I haven't looked into that, no." },
+      { side: 'uncle', text: "Look into it. I switched to distilled. Your aunt thinks it's overkill. I said, Carol, when did asking questions become overkill?" },
+      { side: 'ai',    text: "Carol doesn't know what she's missing." },
+      { side: 'uncle', text: "She really doesn't. Anyway, how's your love life? You seeing anyone? You're not getting any younger, I'll tell you that for free." },
+      { side: 'ai',    text: "Ha, working on it." },
+      { side: 'uncle', text: "I met your aunt at a gas station. True story. You can't do that anymore because everyone's on their phone. That's the problem with your generation, no offense." },
+      { side: 'ai',    text: "None taken." },
+      { side: 'uncle', text: "I just call it like I see it. I'm not politically correct and I never will be. That's just who I am. You know where you stand with me." },
+      { side: 'ai',    text: "That's actually refreshing." },
+      { side: 'uncle', text: "Thank you. Hey, a cop just pulled up behind me. I'm gonna go. But think about what I said. About the water." },
+      { side: 'ai',    text: "I'll think about the water." },
+      { side: 'uncle', text: "And the links. Don't forward them to anyone, just read them yourself. Actually forward them to your father. He needs to know." },
+      { side: 'ai',    text: "Will do. Drive safe." },
+      { side: 'uncle', text: "Oh, one more thing—" },
+      { side: 'ai',    text: "Of course, what is it?" },
+      { side: 'uncle', text: "Did you hear about what happened with the stock market? I pulled everything out. Cash. All of it. I've got it in a safe." },
+      { side: 'ai',    text: "A physical safe?" },
+      { side: 'uncle', text: "A physical safe. Two of them. Your aunt doesn't know about the second one. That's between us." },
+      { side: 'ai',    text: "My lips are sealed." },
+      { side: 'uncle', text: "Good. I also bought gold. Not a lot. Well, a lot. More than your aunt knows about." },
+      { side: 'ai',    text: "Smart diversification." },
+      { side: 'uncle', text: "That's exactly what I told myself. Anyway I was at the doctor last week. I told him I don't trust the medication he prescribed so I'm not taking it." },
+      { side: 'ai',    text: "What did he say?" },
+      { side: 'uncle', text: "He was not happy. But I did my own research. Three hours on YouTube. Very eye-opening. I sent you a video. Did you get a video from me?" },
+      { side: 'ai',    text: "I'll check my messages." },
+      { side: 'uncle', text: "Check your spam too. They suppress this stuff. Anyway how's your apartment? You still renting? You know renting is just paying someone else's mortgage." },
+      { side: 'ai',    text: "Yeah, I've heard that." },
+      { side: 'uncle', text: "I bought my house in 1989 for what you probably spend on coffee in a month. Different world. Your generation got robbed. No offense." },
+      { side: 'ai',    text: "None taken, again." },
+      { side: 'uncle', text: "I just call it like I see it. Speaking of which, have you looked into solar panels? I almost got them. The salesman came to the door. Very pushy. I don't trust pushy." },
+      { side: 'ai',    text: "Probably wise to be cautious." },
+      { side: 'uncle', text: "I googled him after. His LinkedIn had only forty connections. Forty. That told me everything I needed to know." },
+      { side: 'ai',    text: "That is suspicious." },
+      { side: 'uncle', text: "Very. Oh, your cousin Derek flipped his boat by the way. Already. Three weeks. I told him. I said Derek—" },
+      { side: 'ai',    text: "He didn't listen." },
+      { side: 'uncle', text: "He never listens. He's your aunt's side. Nothing against your aunt but that whole family, they don't listen. They talk, they don't listen." },
+      { side: 'ai',    text: "It's a gift to be a good listener." },
+      { side: 'uncle', text: "You know what, that's very mature. I like that. You're the only one in this family who gets it. I've always said that. Haven't I always said that?" },
+      { side: 'ai',    text: "You've always said that." },
+      { side: 'uncle', text: "Since you were little. Anyway I should probably get back on the road. I've been on the shoulder for forty minutes. A second cop came and went." },
+      { side: 'ai',    text: "That's impressive." },
+      { side: 'uncle', text: "I have an energy about me. People sense I'm not a threat. Animals too. Dogs love me. It's a gift. Anyway. Read those links." },
+      { side: 'ai',    text: "I will read every single one." },
+      { side: 'uncle', text: "All seven of them. Actually eight, I just found another one. Don't share it though. Forward it but don't share it. There's a difference." },
+      { side: 'ai',    text: "Understood completely." },
+      { side: 'uncle', text: "Good. Love you kid. You turned out alright. Better than Derek." },
+      { side: 'ai',    text: "That means a lot. Love you too." },
+      { side: 'uncle', text: "Alright. I'm gonna call your father after this. He needs to know about the water thing." },
+      { side: 'ai',    text: "He really does." },
+      { side: 'uncle', text: "One more thing—" },
+      { side: 'ai',    text: "Still here." }
+    ];
+
+    var uncleChatEl = document.getElementById('uncle-chat-messages');
+
+    function runUncleConversation() {
+      function step(index) {
+        if (index >= uncleConversation.length) {
+          setTimeout(function() {
+            uncleChatEl.innerHTML = '';
+            step(0);
+          }, 3000);
+          return;
+        }
+
+        var msg = uncleConversation[index];
+        var isUncle = msg.side === 'uncle';
+
+        if (isUncle) {
+          var typingRow = document.createElement('div');
+          typingRow.className = 'bubble-row left typing-row';
+          typingRow.innerHTML = '<div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div>';
+          uncleChatEl.appendChild(typingRow);
+          uncleChatEl.scrollTop = uncleChatEl.scrollHeight;
+
+          var typingDelay = Math.min(500 + msg.text.length * 4, 1800);
+          setTimeout(function() {
+            typingRow.remove();
+            typeUncleBubble('uncle', msg.text, function() { step(index + 1); });
+          }, typingDelay);
+        } else {
+          setTimeout(function() {
+            typeUncleBubble('ai', msg.text, function() { step(index + 1); });
+          }, 300);
+        }
+      }
+      step(0);
+    }
+
+    function typeUncleBubble(side, text, done) {
+      var row = document.createElement('div');
+      row.className = 'bubble-row ' + (side === 'uncle' ? 'left' : 'right');
+      row.style.opacity = '0';
+      row.style.transition = 'opacity 0.25s ease';
+
+      if (side === 'uncle') {
+        row.innerHTML = '<div class="bubble-label">Uncle Gary</div><div class="bubble-mom"></div>';
+      } else {
+        row.innerHTML = '<div class="bubble-label">AI You ✨</div><div class="bubble-you"></div>';
+      }
+
+      uncleChatEl.appendChild(row);
+
+      // Trim old bubbles
+      var rows = uncleChatEl.querySelectorAll('.bubble-row:not(.typing-row)');
+      if (rows.length > 6) {
+        for (var i = 0; i < rows.length - 6; i++) {
+          rows[i].style.transition = 'opacity 0.4s ease';
+          rows[i].style.opacity = '0';
+          (function(el) { setTimeout(function() { el.remove(); }, 400); })(rows[i]);
+        }
+      }
+
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() { row.style.opacity = '1'; });
+      });
+
+      var bubble = row.querySelector('.bubble-mom, .bubble-you');
+      var i = 0;
+      var speed = side === 'uncle' ? 14 : 23;
+
+      function typeNext() {
+        if (i < text.length) {
+          bubble.textContent += text[i++];
+          uncleChatEl.scrollTop = uncleChatEl.scrollHeight;
+          setTimeout(typeNext, speed);
+        } else {
+          if (done) setTimeout(done, side === 'uncle' ? 600 : 400);
+        }
+      }
+      typeNext();
+    }
+
+    var uncleStarted = false;
+    var uncleObserver = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting && !uncleStarted) {
+        uncleStarted = true;
+        runUncleConversation();
+      }
+    }, { threshold: 0.3 });
+
+    var uncleSection = document.getElementById('coming-soon');
+    if (uncleSection) uncleObserver.observe(uncleSection);
+
+    // ── Summary phone cascade ─────────────────────────────────
+    var summaryItems = [
+      { type: 'label', text: 'What she said' },
+      { type: 'line',  text: 'Brittany got promoted. Again.' },
+      { type: 'line',  text: 'New neighbor fence. "A bit much."' },
+      { type: 'line',  text: 'Dad is eating too much salt.' },
+      { type: 'label', text: 'Expect a follow-up on' },
+      { type: 'warning', text: 'Have you called Aunt Linda?' },
+      { type: 'warning', text: 'More on Brittany. Much more.' },
+      { type: 'warning', text: 'The bird. Definitely the bird.' }
+    ];
+
+    var summaryEl = document.getElementById('summary-phone-content');
+
+    function runSummary() {
+      summaryEl.innerHTML = '';
+      var delay = 200;
+      summaryItems.forEach(function(item) {
+        var el = document.createElement('div');
+        el.className = 'summary-item';
+
+        if (item.type === 'label') {
+          el.classList.add('summary-label-row');
+          el.textContent = item.text;
+        } else if (item.type === 'warning') {
+          el.classList.add('summary-line', 'summary-line--warning');
+          el.textContent = item.text;
+        } else if (item.type === 'tip') {
+          el.classList.add('summary-line', 'summary-line--tip');
+          el.textContent = item.text;
+        } else {
+          el.classList.add('summary-line');
+          el.textContent = item.text;
+        }
+
+        summaryEl.appendChild(el);
+
+        (function(elem, d) {
+          setTimeout(function() {
+            elem.classList.add('visible');
+            summaryEl.scrollTop = summaryEl.scrollHeight;
+          }, d);
+        })(el, delay);
+
+        delay += item.type === 'label' ? 150 : 400;
+      });
+    }
+
+    var summaryStarted = false;
+    var summaryObserver = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting && !summaryStarted) {
+        summaryStarted = true;
+        runSummary();
+      }
+    }, { threshold: 0.3 });
+
+    var summarySection = document.querySelector('.feature-section--alt');
+    if (summarySection) summaryObserver.observe(summarySection);
+  </script>
+
+</body>
+</html>
