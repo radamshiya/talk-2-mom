@@ -1431,6 +1431,8 @@ section {
   .section-header { margin-bottom: 2.5rem; }
   .nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
+  .nav-right { display: none; }
+  .nav-logo svg { height: 26px; }
   .section-inner { padding: 0 1.25rem; }
   .pain-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
